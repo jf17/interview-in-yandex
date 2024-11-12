@@ -31,6 +31,7 @@ public int[] maxMonotonic(int[] a) {
         for (int i = 1; i < a.length; i++) { // Цикл перебирает элементы массива начиная с второго
             int currentElement = a[i]; // текущий элемент массива
             int previousElement = a[i-1]; // предыдущий элемент массива
+
             if (isIncreasing(previousElement, currentElement)) { //Если подмассив монотонно возрастает
                 if (!increasing) { // Если это первый элемент возрастающего подмассива
                     currentLength = 2; // Длина подмассива становится 2 (два элемента)
